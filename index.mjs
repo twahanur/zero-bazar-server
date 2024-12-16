@@ -7,7 +7,9 @@ import path from "path";
 import { readdirSync } from "fs";
 
 const port = process.env.PORT || 8000;
-app.use(cors());
+app.use(cors({
+  origin:'https://zero-bazar.vercel.app'
+}));
 app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
